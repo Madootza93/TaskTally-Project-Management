@@ -1,0 +1,75 @@
+@import 'normalize.css';
+.user-list {
+  width: 250px;
+  min-width: 250px;
+  padding: 30px;
+  box-sizing: border-box;
+  background: linear-gradient(to right, rgba(245, 243, 244, 0) 0%, #F5F3F4 70%, #EDEBEC 100%);
+  color: var(--heading-color);
+  cursor: pointer;
+  transition: background 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+  border: none; 
+  font-weight: bold;
+}
+
+.user-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -30px; 
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(245, 243, 244, 0) 0%, #F5F3F4 100%);
+  pointer-events: none; 
+  z-index: -1;
+}
+
+.user-list::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px; 
+  background: linear-gradient(to right, rgba(216, 213, 209, 0.6) 0%, rgba(235, 233, 234, 0.6) 100%);
+
+}
+
+
+.user-list h2 {
+  text-align: right;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 1.2em;
+  color: black;
+}
+
+.user-list .user-list-item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px auto;
+  transition: transform 0.3s ease; 
+}
+
+.user-list .user-list-item:hover {
+  transform: scale(1.1); 
+}
+.user-list .avatar {
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.user-list .online-user {
+  display: inline-block;
+  margin-right: 10px;
+  width: 12px;
+  height: 12px;
+  background: green;
+  border-radius: 50%;
+  margin-top: 2px;
+}

@@ -1,0 +1,104 @@
+@import 'normalize.css';
+.navbar {
+  width: 100%;
+  padding: 30px 5px;
+  box-sizing: border-box;
+  margin-bottom: 80px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .logo {
+  font-weight: bolder;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  border: px solid transparent;
+  font-weight: bold;
+  box-shadow: 1px 0px 2px 1px #dcdcdc;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.navbar .logo:hover {
+  background: linear-gradient(to left, rgba(245, 243, 244, 0.3) 0%, #D4CFCB 50%, rgba(245, 243, 244, 0.3) 100%); 
+}
+
+
+.navbar .logo .logo-content {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  margin-right: 3px;
+  filter: invert(25%);
+  width: 50px;
+  height: 50px;
+  margin-top: -8px;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  border: 3px solid transparent;
+  font-weight: bold;
+  box-shadow: 1px 0px 2px #dcdcdc;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  background-color: transparent;
+  opacity: 0.8; 
+}
+
+.navbar a:hover {
+  color: black;
+  background: linear-gradient(to left, rgba(245, 243, 244, 0.3) 0%, #D4CFCB 50%, rgba(245, 243, 244, 0.3) 100%); 
+  text-decoration: none;
+}
+
+
+.navbar span {
+  text-decoration: none;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5);
+  color: #000000;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.motto {
+  flex: 1; 
+  padding: 0 20px; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+.motto p {
+  color: black; 
+  position: relative;
+  overflow: hidden; 
+}
+
+.motto p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%; 
+  background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
+}

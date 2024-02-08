@@ -1,0 +1,64 @@
+@import 'normalize.css';
+.create-form {
+  max-width: 600px;
+ 
+  
+}
+
+.create-form span {
+  font-weight: bolder;
+  color: black;
+  display: inline-block; 
+  padding: 2px 4px; 
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+  background-color: transparent; 
+  transition: background-color 0.3s ease; 
+}
+
+.create-form span:hover {
+  background: linear-gradient(to left, rgba(245, 243, 244, 0.3) 0%, #D4CFCB 50%, rgba(245, 243, 244, 0.3) 100%) !important;
+}
+
+
+.create-title {
+  font-weight: bolder;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-right: auto;
+  border: 1px solid transparent;
+  font-weight: bold;
+  box-shadow: 1px 0px 2px 1px #dcdcdc;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.create-title:hover {
+  background: linear-gradient(to left, rgba(245, 243, 244, 0.3) 0%, #D4CFCB 50%, rgba(245, 243, 244, 0.3) 100%); 
+}
+
+.form-notification {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #7f986f; 
+  background-image: linear-gradient(to right, rgba(127, 152, 111, 0.8), rgba(115, 138, 101, 0.8));
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-weight: bolder;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: auto; 
+  min-height: 40px;
+}
+
+
+
+
+
+
+
+
