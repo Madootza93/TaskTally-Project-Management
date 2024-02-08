@@ -10,19 +10,26 @@ To get started with TaskTally, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone < YOUR_GITHUB_REPOSITORY_LINK >
+git clone https://github.com/Madootza93/TaskTally.git
 
 ```
 
 2. Navigate to the project's directory:
- cd TaskTally
+```bash
+   cd TaskTally
+```
+ 
 
 3. Install the necessary node modules:
- npm install
+```bash
+    npm install
+```
 
 4. Start the project on your local development server:
- npm start   
+```bash
+   npm start
+```
 
 
-  
+
 
