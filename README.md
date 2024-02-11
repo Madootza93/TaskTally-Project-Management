@@ -10,7 +10,7 @@ To get started with TaskTally, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Madootza93/TaskTally.git
+git clone https://github.com/Madootza93/TaskTally-Project-Management.git 
 
 ```
 
