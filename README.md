@@ -36,12 +36,12 @@ git clone https://github.com/Madootza93/TaskTally-Project-Management.git
 5. Configure TaskTally with Firebase:
 - In the TaskTally project directory, create a .env file.
 - Add the Firebase configuration obtained in the previous step to your .env file. It should look something like this:
-REACT_APP_API_KEY=your-api-key
-REACT_APP_AUTH_DOMAIN=your-auth-domain
-REACT_APP_PROJECT_ID=your-project-id
-REACT_APP_STORAGE_BUCKET=your-storage-bucket
-REACT_APP_MESSAGING_SENDER_ID=your-messaging-sender-id
-REACT_APP_APP_ID=your-app-id
+REACT_APP_API_KEY=your-api-key\n
+REACT_APP_AUTH_DOMAIN=your-auth-domain\n
+REACT_APP_PROJECT_ID=your-project-id\n
+REACT_APP_STORAGE_BUCKET=your-storage-bucket\n
+REACT_APP_MESSAGING_SENDER_ID=your-messaging-sender-id\n
+REACT_APP_APP_ID=your-app-id\n
 
 
 6. Start the project on your local development server:
