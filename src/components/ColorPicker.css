@@ -1,10 +1,11 @@
-@import 'normalize.css';
+
 .change-color-container {
     text-align: center;
     margin-top: 3px;
     display: inline;
     position: absolute;
     margin-left: 10px;
+    margin-top: 10px;
    
   }
 

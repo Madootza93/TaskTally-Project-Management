@@ -1,5 +1,9 @@
+
 {
   "projects": {
-    "default": "thedojosite-7a6d2"
-  }
+    "default":"thedojosite-7a6d2",
+    "TaskTally": "thedojosite-7a6d2"
+  },
+  "targets": {},
+  "etags": {}
 }

@@ -11,31 +11,34 @@ export default function Signup() {
   const [displayName, setDisplayName] = useState('');
   const [thumbnail, setThumbnail] = useState(null);
   const [thumbnailError, setThumbnailError] = useState(null);
+  const [passwordError, setPasswordError] = useState(null);
   const [isFormVisible, setIsFormVisible] = useState(true); 
   const { signup, isPending, error } = useSignup();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    
     setIsFormVisible(false);
-  };
-  
-  useEffect(() => {
-    const handleSignup = async () => {
-      try {
-        await signup(email, password, displayName, thumbnail);
-        navigate('/', { state: { message: 'Successfully created account!' } });
-      } catch (error) {
-        setIsFormVisible(true);
-      }
-    };
 
-    if (!isFormVisible) {
-      handleSignup();
+    if (!isPasswordValid(password)) {
+      setPasswordError('Password must be 8-20 characters, containing at least one uppercase letter, one lowercase letter, one number, and one special character.');
+      return;
     }
-  }, [email, password, displayName, thumbnail, signup, navigate, isFormVisible]);
 
- 
+    try {
+      await signup(email, password, displayName, thumbnail);
+      navigate('/', { state: { message: 'Successfully created account!' } });
+    } catch (error) {
+      setIsFormVisible(true);
+    }
+  };
+
+  useEffect(() => {
+    if (!isFormVisible) {
+      setIsFormVisible(true);
+    }
+  }, [isFormVisible]);
 
   const handleFileChange = (e) => {
     setThumbnail(null);
@@ -59,6 +62,13 @@ export default function Signup() {
     setThumbnail(selected);
     console.log('Thumbnail updated!');
   };
+
+  // Password validation function
+  const isPasswordValid = (password) => {
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>])[a-zA-Z\d!@#$%^&*(),.?":{}|<>]{8,20}$/;
+    return passwordRegex.test(password);
+  };
+
   return (
     <>
       {isFormVisible && (
@@ -82,6 +92,7 @@ export default function Signup() {
               onChange={(e) => setPassword(e.target.value)}
               value={password}
             />
+            {passwordError && <div className="error">{passwordError}</div>}
           </label>
 
           <label>
