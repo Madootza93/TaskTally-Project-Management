@@ -25,3 +25,5 @@ node_modules/
 node_modules/
 .env
 .firebaserc
+firestore.rules
+storage.rules
